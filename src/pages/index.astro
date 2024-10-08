@@ -1,0 +1,532 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+
+import Hero from '~/components/widgets/Hero.astro';
+import Note from '~/components/widgets/Note.astro';
+import Features from '~/components/widgets/Features.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+import Steps from '~/components/widgets/Steps.astro';
+import Content from '~/components/widgets/Content.astro';
+import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
+import FAQs from '~/components/widgets/FAQs.astro';
+import Stats from '~/components/widgets/Stats.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+
+import Hero2 from '~/components/widgets/Hero2.astro';
+import Pricing from '~/components/widgets/Pricing.astro';
+import Testimonials from '~/components/widgets/Testimonials.astro';
+
+const appStoreImg = '~/assets/images/app-store.png';
+const appStoreDownloadLink = 'https://github.com/onwidget/astrowind';
+
+const googlePlayImg = '~/assets/images/google-play.png';
+const googlePlayDownloadLink = 'https://github.com/onwidget/astrowind';
+
+import Button from '~/components/ui/Button.astro';
+import Image from '~/components/common/Image.astro';
+
+const metadata = {
+  title: 'Arxatec - Consultas laborales',
+  ignoreTitleTemplate: true,
+};
+---
+
+<Layout metadata={metadata}>
+  
+  <!-- Hero Widget ******************* -->
+
+  <!-- Hero2 Widget ******************* -->
+
+  <Hero2
+    tagline="Arxatec"
+    actions={[
+      { variant: 'primary', target: '_blank', text: 'Iniciar consulta', href: '#' },
+      { text: 'Mas informacion', href: '#features' },
+    ]}
+    image={{
+      src: 'https://images.pexels.com/photos/6077326/pexels-photo-6077326.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+      alt: 'AstroWind Hero Image',
+      style: 'border-radius: 50%; width: 500px; height: 500px; object-fit: cover;',
+    }}
+
+  >
+  <Fragment slot="title">
+    Simplifica tus consultas legales con Arxatec: tu aliado <span style="color: #3A35A0;" class="highlight">
+
+      en Derecho Laboral</span
+    ><br />
+</Fragment>
+
+<Fragment slot="subtitle">
+  <span class="hidden sm:inline">
+    
+    Optimiza tu experiencia legal con <span class="font-semibold">Arxatec</span>. Accede a asesoría laboral especializada y tecnología avanzada para resolver tus casos de manera rápida y eficiente.
+  </span>
+</Fragment>
+
+
+  </Hero2>
+
+  
+
+  <!-- Note Widget ******************* -->
+
+  <Note />
+
+  <!-- Stats Widget ****************** -->
+
+  <Stats
+  stats={[
+    { title: "Solicitudes procesadas", amount: '1.2K' },
+    { title: 'Abogados especializados', amount: '35' },
+    { title: 'Tiempo promedio de respuesta', amount: '24h' },
+    { title: 'Satisfacción de usuarios', amount: '82%' },
+  ]}
+/>
+
+
+
+
+
+  <!-- Features Widget *************** -->
+
+  <Features
+    id="features"
+    title="¿Por qué elegir Arxatec?"
+    subtitle="Cada una de las siguientes características mejora la propuesta de valor de Arxatec."
+    columns={2}
+    items={[
+      {
+        title: 'Plataforma legal especializada en Derecho Laboral',
+        description:
+          'Ofrecemos una potente combinación de consultas legales específicas en Derecho Laboral, optimizando tanto la asesoría como la experiencia del usuario.',
+        icon: 'tabler:layers-union',
+      },
+      {
+        title: 'Diseño adaptable para empresas y trabajadores',
+        description: `Arxatec se ajusta fácilmente a las necesidades legales de empresas, trabajadores y emprendedores, con un diseño versátil que se adapta a cualquier situación.`,
+        icon: 'tabler:artboard',
+      },
+      {
+        title: 'Asesoría legal personalizada y eficiente',
+        description:
+          'Presentamos un sistema intuitivo que organiza casos legales, consultas previas y soluciones destacadas, ideal para abogados y consultores que buscan ofrecer servicios eficientes.',
+        icon: 'tabler:writing',
+      },
+      {
+        title: 'Consultas rápidas y seguimiento de casos en línea',
+        description: `Nuestras consultas están diseñadas para resolver problemas legales de manera rápida y efectiva, con seguimiento en tiempo real para mayor tranquilidad.`,
+        icon: 'tabler:podium',
+      },
+      {
+        title: 'Respuestas legales rápidas con tecnología avanzada',
+        description: `Arxatec asegura tiempos de respuesta rápidos y una experiencia fluida, optimizando la consulta legal para una asesoría eficiente y profesional.`,
+        icon: 'tabler:rocket',
+      },
+      {
+        title: 'Estructura optimizada para consultas laborales',
+        description: `Siguiendo las mejores prácticas, nuestras consultas claras y organizadas mejoran la visibilidad en buscadores, facilitando el acceso a los servicios jurídicos.`,
+        icon: 'tabler:eyeglass',
+      },
+    ]}
+    
+  />
+
+  <!-- Content Widget **************** -->
+
+  <Content
+  isReversed
+  tagline="ARXATEC"
+  title="Casos de uso"
+  subtitle="Descubre cómo la plataforma versátil de Arxatec es la solución ideal para diversos casos legales, ofreciendo asesoría personalizada para garantizar el éxito."
+  items={[
+    {
+      title: 'Resolución de conflictos laborales',
+      description:
+        'Empresas y empleados pueden utilizar Arxatec para resolver disputas laborales mediante asesoría legal especializada. Los abogados ofrecen una guía detallada para solucionar problemas como el incumplimiento de contratos o condiciones de trabajo injustas, reduciendo tiempos de resolución.',
+    },
+    {
+      title: 'Monitoreo de procesos judiciales laborales',
+      description:
+        'Con Arxatec, los trabajadores y empresas pueden hacer seguimiento a sus casos judiciales laborales, manteniendo un registro actualizado del estado de sus procesos, plazos y documentos requeridos, permitiendo una gestión más eficaz.',
+    },
+    {
+      title: 'Optimización de liquidaciones laborales',
+      description:
+        'La plataforma facilita la consulta y cálculo de liquidaciones laborales, garantizando que los pagos por despido, renuncia o jubilación sean justos y acorde a la normativa, tanto para empleados como empleadores.',
+    },
+    {
+      title: 'Consulta laboral para despido injustificado',
+      description: `Un trabajador ingresa a la plataforma para realizar una consulta sobre un despido que considera injusto. Con la ayuda de Arxatec, envía su caso a un abogado especializado, quien le responde en tiempo real y le proporciona asesoría sobre los pasos legales a seguir.`,
+    },
+    {
+      title: 'Asesoría a una empresa sobre contratos laborales',
+      description:
+        'Una empresa utiliza Arxatec para obtener asesoría legal personalizada en la creación y revisión de contratos laborales. Gracias a la plataforma, puede resolver dudas rápidamente y ajustar los contratos a la normativa vigente.',
+    },
+   
+  ]}
+  image={{
+    src: 'https://images.pexels.com/photos/9710824/pexels-photo-9710824.jpeg?auto=compress&cs=tinysrgb&w=400',
+    alt: 'Casos laborales en Arxatec',
+  }}
+>
+  <!-- <Fragment slot="content">
+    <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+      Arxatec: Herramienta integral para la gestión de casos laborales
+    </h3>
+    Con Arxatec, puedes gestionar conflictos laborales, monitorear casos judiciales y asegurar liquidaciones justas, con el respaldo de una plataforma confiable y personalización en cada consulta.
+  </Fragment> -->
+
+  <Fragment slot="bg">
+    <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+  </Fragment>
+</Content>
+
+
+  <!-- Content Widget **************** -->
+
+  <Content
+  isAfterContent
+  items={[
+    
+    {
+      title: 'Seguimiento de indemnización laboral',
+      description:
+        'Un usuario que ha recibido una sentencia favorable en un caso de indemnización laboral accede a Arxatec para dar seguimiento al cumplimiento de la misma. Puede consultar actualizaciones de su caso y recibir notificaciones sobre los avances legales.',
+    },
+    {
+      title: 'Resolución rápida de conflictos laborales',
+      description:
+        'Un empleado y su empleador utilizan Arxatec para resolver un conflicto sobre condiciones de trabajo. Mediante la plataforma, ambos reciben asesoría y logran encontrar una solución sin necesidad de ir a juicio, ahorrando tiempo y recursos.',
+    },
+  ]}
+  image={{
+    src: 'https://images.pexels.com/photos/8488021/pexels-photo-8488021.jpeg?auto=compress&cs=tinysrgb&w=400',
+    alt: 'Imagen de un caso legal',
+  }}
+>
+  <Fragment slot="content">
+    Arxatec facilita la resolución de casos laborales proporcionando una plataforma accesible y especializada.
+  </Fragment>
+
+  <Fragment slot="bg">
+    <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+  </Fragment>
+</Content>
+
+
+  <!-- Content Widget **************** -->
+
+  <!-- <Content
+    isReversed
+    isAfterContent
+    items={[
+      {
+        title: 'Enhanced user engagement',
+        description:
+          'Captivate your audience with interactive elements, intuitive navigation, and visually appealing layouts, encouraging longer visits.',
+      },
+      {
+        title: 'Continuous improvement',
+        description:
+          'Ensure your website stays aligned with the latest trends and technologies through regular updates and enhancements.',
+      },
+      {
+        title: 'Time and resource efficiency',
+        description:
+          'Skip the time-consuming process of building a website from scratch and launch your online presence sooner with AstroWind.',
+      },
+      {
+        title: 'Community support',
+        description: `Join the growing AstroWind community for insights, resources, and assistance, ensuring you're never alone on your web development journey.`,
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1611462985358-60d3498e0364?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
+      alt: 'Astronauts Image',
+    }}
+  >
+    <Fragment slot="content">Designed to foster growth and success.</Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content> -->
+
+  <!-- Steps Widget ****************** -->
+
+  <Steps
+  title="Realiza tu consulta legal en línea de manera rápida y eficiente con Arxatec."
+  items={[
+    {
+      title: 'Step 1: <span class="font-medium">Registro</span>',
+      description:
+        "Crea tu cuenta en Arxatec. Proporciona tus datos personales y confirma tu correo electrónico para acceder a todas las funcionalidades de la plataforma. En pocos minutos estarás listo para realizar tus consultas legales.",
+      icon: 'tabler:user-plus',
+    },
+    {
+      title: 'Step 2: <span class="font-medium">Accede a tu Dashboard</span>',
+      description:
+        "Una vez registrado, ingresa a tu panel de control donde podrás gestionar tus consultas. Desde este espacio puedes ver el estado de consultas anteriores, registrar nuevas consultas y acceder a toda la información de tu cuenta.",
+      icon: 'tabler:layout-dashboard',
+    },
+    {
+      title: 'Step 3: <span class="font-medium">Registrar consulta</span>',
+      description:
+        'Desde el dashboard, selecciona la opción "Nueva Consulta". Rellena los campos requeridos, describiendo tu caso y proporcionando la información relevante. Nuestro equipo de abogados especializados analizará tu situación y te brindará asesoría personalizada.',
+      icon: 'tabler:note',
+    },
+    {
+      title: 'Listo!',
+      description: 'Tu consulta ha sido registrada. Recibirás una respuesta en breve, y podrás hacer seguimiento a través del dashboard.',
+      icon: 'tabler:check',
+    },
+  ]}
+  image={{
+    src: 'https://images.unsplash.com/photo-1616198814651-e71f960c3180?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80',
+    alt: 'Realiza consultas en línea con Arxatec',
+  }}
+/>
+
+
+  <!-- Features2 Widget ************** -->
+
+  <Features2
+    title="Servicios legales laborales"
+    subtitle="Arxatec ofrece una variedad de servicios especializados en el área laboral"
+    tagline="Servicios"
+    items={[
+      {
+        title: 'Asesoría en despidos',
+        description: "Ofrecemos orientación completa para gestionar despidos injustificados o por causas específicas, asegurando que ambas partes comprendan sus derechos y obligaciones.",
+        icon: 'flat-color-icons:template',
+      },
+      {
+        title: 'Negociaciones laborales',
+        description: "Facilitamos negociaciones entre empleadores y trabajadores para alcanzar acuerdos justos en temas como salarios, condiciones de trabajo y más.",
+        icon: 'flat-color-icons:gallery',
+      },
+      {
+        title: 'Revisión de contratos',
+        description: 'Analizamos y mejoramos los contratos laborales para garantizar su cumplimiento con la normativa vigente y proteger los intereses de ambas partes.',
+        icon: 'flat-color-icons:approval',
+      },
+      {
+        title: 'Demandas laborales',
+        description: "Brindamos apoyo en la presentación y seguimiento de demandas laborales, asegurando un proceso eficiente y dentro del marco legal.",
+        icon: 'flat-color-icons:document',
+      },
+      {
+        title: 'Resolución de conflictos',
+        description: 'Acompañamos a trabajadores y empleadores en la resolución de conflictos laborales mediante asesoría y mediación.',
+        icon: 'flat-color-icons:advertising',
+      },
+      {
+        title: 'Cálculo de beneficios laborales',
+        description: 'Ayudamos a calcular liquidaciones, compensaciones, y otros beneficios laborales para garantizar que todo se realice de forma correcta.',
+        icon: 'flat-color-icons:currency-exchange',
+      },
+      {
+        title: 'Asesoría en seguridad y salud laboral',
+        description: 'Proveemos orientación sobre las normas de seguridad y salud ocupacional, asegurando ambientes de trabajo seguros para empleados.',
+        icon: 'flat-color-icons:voice-presentation',
+      },
+      {
+        title: 'Auditoría de cumplimiento laboral',
+        description: 'Revisamos y evaluamos si tu empresa cumple con las leyes laborales vigentes, evitando posibles sanciones.',
+        icon: 'flat-color-icons:business-contact',
+      },
+      {
+        title: 'Consultas en línea',
+        description: "Accede a nuestro servicio de consultas en línea para recibir respuestas rápidas y efectivas sobre cualquier tema de derecho laboral.",
+        icon: 'flat-color-icons:database',
+      },
+    ]}
+  >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+</Features2>
+
+
+    <!-- Pricing Widget ******************* -->
+
+    <Pricing
+    title="Planes de precios flexibles"
+    prices={[
+      {
+        title: 'Básico',
+        subtitle: 'Acceso a consultas básicas y revisión de contratos laborales',
+        price: '0',
+        period: '/ mes',
+        callToAction: {
+          target: '_blank',
+          text: 'Comienza Gratis',
+          href: '#',
+        },
+      },
+      {
+        title: 'Profesional',
+        subtitle: 'Asesoría avanzada y gestión de conflictos laborales',
+        price: 25,
+        period: '/ mes',
+        callToAction: {
+          target: '_blank',
+          text: 'Mejorar a Profesional',
+          href: '#',
+        },
+        hasRibbon: true,
+        ribbonTitle: 'más popular',
+      },
+      {
+        title: 'Corporativo',
+        subtitle: 'Soluciones personalizadas para grandes empresas y proyectos complejos',
+        price: 75,
+        period: '/ mes',
+        callToAction: {
+          target: '_blank',
+          text: 'Desbloquear Funciones Corporativas',
+          href: '#',
+        },
+      },
+    ]}
+/>
+
+
+<FAQs
+  title="Preguntas Frecuentes"
+  subtitle="Resuelve tus dudas sobre cómo Arxatec puede ayudarte a resolver tus problemas legales laborales de manera eficiente y accesible."
+  tagline="FAQs"
+  classes={{ container: 'max-w-6xl' }}
+  items={[
+    {
+      title: '¿Cómo puedo registrar una consulta en Arxatec?',
+      description:
+        'Para registrar una consulta, primero debes crear una cuenta. Una vez registrado, tendrás acceso a un panel donde podrás ingresar los detalles de tu caso y un abogado especializado en derecho laboral te asesorará.',
+    },
+    {
+      title: '¿Qué tipo de consultas laborales puedo realizar?',
+      description:
+        'En Arxatec puedes hacer consultas sobre despidos, contratos laborales, pagos de beneficios, acoso laboral, entre otros temas relacionados con el derecho laboral.',
+    },
+    {
+      title: '¿Cuánto tiempo tarda en responder un abogado?',
+      description:
+        'El tiempo de respuesta depende de la complejidad de la consulta, pero generalmente nuestros abogados responden en un plazo de 24 a 48 horas.',
+    },
+    {
+      title: '¿Es Arxatec solo para empresas?',
+      description:
+        'No, en Arxatec ofrecemos servicios tanto para empresas como para trabajadores que necesiten asesoría en temas laborales.',
+    },
+    {
+      title: '¿Qué costos están involucrados?',
+      description:
+        'Ofrecemos un plan gratuito que incluye consultas básicas, y planes pagos con acceso a asesoría más avanzada y soluciones personalizadas para empresas.',
+    },
+    {
+      title: '¿Puedo hacer seguimiento de mis consultas?',
+      description:
+        'Sí, todas tus consultas estarán disponibles en tu panel de usuario para que puedas revisar el estado y los comentarios de los abogados.',
+    },
+  ]}
+/>
+
+
+<!-- Testimonials Widget *********** -->
+
+<Testimonials
+title="Lo que dicen nuestros usuarios"
+testimonials={[
+  {
+    testimonial: `Gracias a Arxatec, pude resolver un conflicto laboral de manera rápida y eficiente. Los abogados son muy profesionales y entendieron mi situación perfectamente. ¡Recomendado al 100%!`,
+    name: 'María Fernández',
+    job: 'Gerente de Recursos Humanos',
+    image: {
+      src: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
+      alt: 'María Fernández Image',
+    },
+  },
+  {
+    testimonial: `Como trabajador, estaba enfrentando problemas con el pago de mis beneficios laborales. Gracias a la plataforma de Arxatec, obtuve asesoría en tiempo récord y pude solucionar mi caso con éxito.`,
+    name: 'Carlos Jiménez',
+    job: 'Empleado de Planta',
+    image: {
+      src: 'https://images.unsplash.com/photo-1524253482453-3fed8d2fe12b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
+      alt: 'Carlos Jiménez Image',
+    },
+  },
+  {
+    testimonial:
+      'El proceso de consulta fue claro y sencillo. Recibí respuestas detalladas y un seguimiento constante por parte del abogado. Arxatec ha sido un gran aliado en la gestión de asuntos laborales para mi empresa.',
+    name: 'Laura González',
+    job: 'Directora Administrativa',
+    image: {
+      src: 'https://images.unsplash.com/photo-1542206395-9feb3edaa68d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
+      alt: 'Laura González Image',
+    },
+  },
+]}
+callToAction={{
+  target: '_blank',
+  text: 'Leer más testimonios',
+  href: 'https://arxatec.com/testimonios',
+  icon: 'tabler:chevron-right',
+}}
+/>
+
+
+  <!-- HighlightedPosts Widget ******* -->
+<!-- 
+  <BlogLatestPosts
+    title="Descubre más contenido en nuestro Blog"
+    information={`Nuestro blog está diseñado para ofrecerte información valiosa sobre temas legales laborales.
+                        Cada nuevo artículo es un paso importante para que estés informado y preparado en la gestión de tus derechos laborales y en la resolución de conflictos.
+                        ¡Explora y conviértete en un experto en derecho laboral con Arxatec!`}
+  /> -->
+
+
+<!-- CallToAction Widget *********** -->
+
+<CallToAction
+    id="download"
+    title="¡Descarga nuestra app ahora!"
+    subtitle="Accede a una variedad de recursos legales, simplifica la gestión de tus derechos laborales y fortalece tu presencia online."
+>
+<div slot="actions" class="flex max-w-sm gap-4">
+  <Button variant="link" href={appStoreDownloadLink}>
+    <Image src={appStoreImg} alt="Imagen de la App Store" width={200} />
+  </Button>
+
+  <Button variant="link" href={googlePlayDownloadLink}>
+    <Image src={googlePlayImg} alt="Imagen de Google Play" width={200} />
+  </Button>
+</div>
+
+</CallToAction>
+
+
+  <!-- CallToAction Widget *********** -->
+
+  <!-- <CallToAction
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Get template',
+        href: 'https://github.com/onwidget/astrowind',
+        target: '_blank',
+        icon: 'tabler:download',
+      },
+    ]}
+  >
+    <Fragment slot="title">
+      Astro&nbsp;+&nbsp;<br class="block sm:hidden" /><span class="sm:whitespace-nowrap">Tailwind CSS</span>
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      Be very surprised by these huge fake numbers you are seeing on this page. <br class="hidden md:inline" />Don't
+      waste more time! :P
+    </Fragment>
+  </CallToAction> -->
+</Layout>
